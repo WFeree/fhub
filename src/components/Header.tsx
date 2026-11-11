@@ -28,6 +28,7 @@ const Header = () => {
             <li className="pl-2 mt-4">Basketball Officiating</li>
             <li className="pl-2 ">Esports Coach</li>
             <li className="pl-2 ">Graphic Designer</li>
+            <li>See more at <a href="#" className="underline underline-offset-4 hover:cursor-pointer">Hobbys & Interests</a></li>
           </ul>
         </div>
       </div>
