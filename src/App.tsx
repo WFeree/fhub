@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import Navbar from "./components/navbar";
 
 export default function App() {
@@ -6,8 +7,9 @@ export default function App() {
       <Navbar/>
 
       <main>
-        <section className="py-16">
+        <section className="py-8">
           <div className="mx-auto max-w-6xl px-6">
+            <Header></Header>
           </div>
         </section>
       </main>

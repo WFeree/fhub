@@ -16,7 +16,7 @@ const Navbar = () => {
       <nav className="flex mx-auto h-16 max-w-6xl items-center justify-center px-6">
         <div className="flex items-center gap-4 mr-auto">
           <img src="./logotrans.png" className="h-16"/>
-          <span className="font-bold">Ferenc Wágner - CV</span>
+          <span className="font-bold">CV</span>
         </div>
         <div className="flex justify-center items-center gap-12">
           {NavItem("", "About")}
