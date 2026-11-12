@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-react"
 import "./Header.css"
 import { Separator } from "./ui/separator"
 const Header = () => {
@@ -19,15 +20,15 @@ const Header = () => {
           <p className="">Get to know me: </p>
           {HeaderItem("Name:","Ferenc Wágner")}
           <Separator className="mt-4"/>
-          {HeaderItem("Age:","19 years")}
+          {HeaderItem("Location:","Debrecen, Hungary")}
           <Separator className="mt-4"/>
           {HeaderItem("Current position:","Software Engineering Student")}
           <Separator className="mt-4"/>
           {HeaderItem("Man of many interests:")}
           <ul className="flex flex-col gap-4">
-            <li className="pl-2 mt-4">Basketball Officiating</li>
-            <li className="pl-2 ">Esports Coach</li>
-            <li className="pl-2 ">Graphic Designer</li>
+            <li className="pl-2 mt-4 flex items-center"><ChevronRight size={18}/>Basketball Officiating</li>
+            <li className="pl-2 flex items-center"><ChevronRight size={18}/>Esports Coach</li>
+            <li className="pl-2 flex items-center"><ChevronRight size={18}/>Graphic Designer</li>
             <li>See more at <a href="#" className="underline underline-offset-4 hover:cursor-pointer">Hobbys & Interests</a></li>
           </ul>
         </div>
