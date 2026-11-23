@@ -8,11 +8,10 @@ export const Projects = () => {
   const main = projects.find(p => p.featured)!
   const rest = projects.filter(p => p !== main)
   return (
-    <Section id="work" title="Selected work">
-      {/* Main feature: larger, filled with the accent colour */}
-      <Card className="mb-10 gap-6 border-0 bg-primary p-2 text-primary-foreground sm:p-6">
-        <CardHeader>
-          <CardTitle className="text-[clamp(1.5rem,1rem+2.2vw,2.75rem)] leading-tight tracking-tight">{main.title}</CardTitle>
+    <Section id="work" title="Featured Projects">
+      <Card className="bg-primary mb-6">
+        <CardHeader className="w-full">
+          <CardTitle className="text-[clamp(1.5rem,1rem+2.2vw,2.75rem)] leading-tight tracking-tight text-white font-semibold">{main.title}</CardTitle>
           <CardDescription className="max-w-[62ch] text-base text-primary-foreground">{main.summary}</CardDescription>
         </CardHeader>
         <CardFooter>

@@ -6,7 +6,7 @@ import { Container, Icon } from "@/Layout"
 import { profile } from "@/data/content"
 
 const links = [
-  { href: "#work", label: "Work" },
+  { href: "#work", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },

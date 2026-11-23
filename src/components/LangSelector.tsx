@@ -21,7 +21,7 @@ const LangSelector = () => {
 
   return (
     <div className="relative">
-      <Button variant="outline" className="flex border rounded-4xl px-4 py-2 items-center gap-2 w-25" onClick={() => setLangSelectorOpen(!langSelectorOpen)}>
+      <Button variant="outline" className="flex rounded-4xl px-4 py-2 items-center gap-2 w-25" onClick={() => setLangSelectorOpen(!langSelectorOpen)}>
         <Globe size={18} />
         <span>{lang.toUpperCase()}</span>
       </Button>

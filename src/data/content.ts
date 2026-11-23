@@ -1,10 +1,8 @@
-// Filler data. Replace with real content.
 export const profile = {
   name: "Ferenc Wágner",
   role: "Full-stack developer",
   intro: "I build fast, accessible web apps for small teams and turn messy workflows into tools people enjoy using.",
   location: "Debrecen, Hungary",
-  email: "Send an email!",
   github: "https://github.com/WFeree",
   linkedin: "https://www.linkedin.com/in/example",
 }
@@ -42,4 +40,21 @@ export const strengths = [
   "Accessibility from the first sketch",
   "Shipping small, then iterating",
   "Fluent in Hungarian and English",
+]
+
+export const accolades = [
+  {
+    image: "mkosz.png",
+    title: "Basketball Referee",
+    subtext: "Youngest NB2 basketball referee in the 2026/2027 season"
+  },
+  {
+    image: "fiba.svg",
+    title: "FIBA Volunteer",
+    subtext: "Signed letter of appreciation from both LOC and FIBA Basketball Champions League CEO"
+  },{
+    image: "",
+    title: "asd2",
+    subtext: ""
+  }
 ]

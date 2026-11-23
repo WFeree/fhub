@@ -1,4 +1,4 @@
-import { ArrowDown, Mail } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { Container, Icon } from "@/Layout"
 import { profile } from "@/data/content"
@@ -14,7 +14,6 @@ export const Hero = () => (
       <a href="#work" className={buttonVariants({ size: "lg", className: "rounded-full" })}>
         <Icon as={ArrowDown} />See my work
       </a>
-      <a href={`mailto:${profile.email}`} className={buttonVariants({ size: "lg", variant: "outline", className: "rounded-full" })}><Icon as={Mail} />Email me</a>
     </div>
     </Container>
   </section>

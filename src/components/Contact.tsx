@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Container, Icon } from "@/Layout"
@@ -13,9 +13,6 @@ export const Contact = () => (
           Have a project or role in mind? Let's talk.
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a href={`mailto:${profile.email}`} className={buttonVariants()}>
-            <Icon as={Mail} />{profile.email}
-          </a>
           <a href={profile.github} className={buttonVariants({ variant: "outline" })}>
             <Icon as={GithubIcon} />GitHub
           </a>
