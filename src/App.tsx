@@ -1,20 +1,21 @@
-import Education from "./components/Education";
-import Header from "./components/Header";
-import Navbar from "./components/navbar";
+import { Header } from "./components/Header"
+import { Hero } from "./components/Hero"
+import { Projects } from "./components/Projects"
+import { Experience } from "./components/Experience"
+import { About } from "./components/About"
+import { Contact } from "./components/Contact"
 
 export default function App() {
   return (
-    <>
-      <Navbar/>
-
+    <div className="min-h-screen bg-background font-sans text-foreground antialiased">
+      <Header />
       <main>
-        <section className="py-8">
-          <div className="mx-auto max-w-6xl px-6">
-            <Header/>
-            <Education />
-          </div>
-        </section>
+        <Hero />
+        <Projects />
+        <Experience />
+        <About />
       </main>
-    </>
-  );
+      <Contact />
+    </div>
+  )
 }

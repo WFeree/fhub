@@ -1,40 +1,46 @@
-import { ChevronRight } from "lucide-react"
-import "./Header.css"
-import { Separator } from "./ui/separator"
-const Header = () => {
+import { Menu } from "lucide-react"
+import { buttonVariants } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import LangSelector from "./LangSelector"
+import { Container, Icon } from "@/Layout"
+import { profile } from "@/data/content"
 
-  const HeaderItem = (title: string, value?: string) => {
-    return(
-      <div className="flex gap-4 mt-4">
-        <h1>{title}</h1>
-        <p>{value}</p>
-      </div>
-    )
-  }
-  return (
-    <div className="grid grid-cols-2 gap-8">
-      <div className="aspect-square border rounded-2xl"></div>
-      <div className="mt-8 flex flex-col">
-        <h1 className="text-7xl font-semibold">Hi there! <span id="hand">👋</span></h1>
-        <div className="mt-4">
-          <p className="">Get to know me: </p>
-          {HeaderItem("Name:","Ferenc Wágner")}
-          <Separator className="mt-4"/>
-          {HeaderItem("Location:","Debrecen, Hungary")}
-          <Separator className="mt-4"/>
-          {HeaderItem("Current position:","Software Engineering Student")}
-          <Separator className="mt-4"/>
-          {HeaderItem("Man of many interests:")}
-          <ul className="flex flex-col gap-4">
-            <li className="pl-2 mt-4 flex items-center"><ChevronRight size={18}/>Basketball Officiating</li>
-            <li className="pl-2 flex items-center"><ChevronRight size={18}/>Esports Coach</li>
-            <li className="pl-2 flex items-center"><ChevronRight size={18}/>Graphic Designer</li>
-            <li>See more at <a href="#" className="underline underline-offset-4 hover:cursor-pointer">Hobbys & Interests</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  )
-}
+const links = [
+  { href: "#work", label: "Work" },
+  { href: "#experience", label: "Experience" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
+]
 
-export default Header
+export const Header = () => (
+  <header className="sticky top-0 z-10 border-b bg-background/90 backdrop-blur">
+    <Container className="flex min-h-16 items-center justify-between gap-4">
+      <a href="#top" className="font-bold tracking-tight flex items-center gap-2">
+        <img src="logotrans.png" alt="logo" className="w-12"/>
+        <span className="hidden md:block">{profile.name}</span>
+      </a>
+
+      <nav aria-label="Main" className="hidden gap-6 sm:flex">
+        {links.map(l => (
+          <a key={l.href} href={l.href} className="font-medium text-muted-foreground hover:text-foreground">{l.label}</a>
+        ))}
+      </nav>
+
+      <div className="flex items-center gap-2">
+        <LangSelector />
+        <Sheet>
+          <SheetTrigger className={buttonVariants({ variant: "outline", size: "icon", className: "sm:hidden" })} aria-label="Open menu">
+            <Icon as={Menu} />
+          </SheetTrigger>
+          <SheetContent side="right">
+            <nav aria-label="Mobile" className="flex flex-col gap-1 p-4">
+              {links.map(l => (
+                <SheetClose render={<a href={l.href} className={buttonVariants({ variant: "ghost", className: "justify-start text-base" })} />}>{l.label}</SheetClose>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </Container>
+  </header>
+)
