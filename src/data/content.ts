@@ -7,16 +7,32 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/example",
 }
 
-export const projects = [
-  { title: "ClinicQueue", year: 2026, featured: true, href: "#",
-    summary: "Appointment and waiting-room software for small clinics. Cut front-desk phone calls by a third in the first month and runs on any tablet.",
-    stack: ["React", "TypeScript", "PostgreSQL"] },
-  { title: "Fhub", year: 2026, href: "#",
-    summary: "A personal hub that gathers my projects, notes and links in one fast site.", stack: ["Vite", "React", "shadcn/ui"] },
-  { title: "TrailLog", year: 2025, href: "#",
-    summary: "Offline-first hiking diary that syncs routes and photos when you get signal.", stack: ["PWA", "IndexedDB"] },
-  { title: "Budget Buddy", year: 2024, href: "#",
-    summary: "Shared household budget with monthly summaries in Hungarian and English.", stack: ["Node.js", "SQLite"] },
+export const skills = [
+  {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    title: "Figma"
+  },
+  {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    title: "Git"
+  },
+  {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    title: "React"
+  },
+  {
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    title: "TypeScript"
+  },{
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg",
+    title: "NextJS"
+  },{
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    title: "Python"
+  },{
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+    title: "Django"
+  }
 ]
 
 export const jobs = [
@@ -52,9 +68,5 @@ export const accolades = [
     image: "fiba.svg",
     title: "FIBA Volunteer",
     subtext: "Signed letter of appreciation from both LOC and FIBA Basketball Champions League CEO"
-  },{
-    image: "",
-    title: "asd2",
-    subtext: ""
   }
 ]
