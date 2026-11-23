@@ -2,8 +2,8 @@ import { Globe } from "lucide-react"
 import { Button } from "./ui/button"
 import { useState } from "react"
 import "flag-icons/css/flag-icons.min.css"
-
-type Lang = "en" | "hu"
+import { useLang } from "@/LangContext"
+import type { Lang } from "@/data/content"
 
 const LANGUAGES: { code: Lang; flagCode: string; name: string }[] = [
   { code: "en", flagCode: "us", name: "EN" },
@@ -12,7 +12,7 @@ const LANGUAGES: { code: Lang; flagCode: string; name: string }[] = [
 
 const LangSelector = () => {
   const [langSelectorOpen, setLangSelectorOpen] = useState<boolean>(false)
-  const [lang, setLang] = useState<Lang>("en")
+  const { lang, setLang } = useLang()
 
   function changeLang(newLang: Lang) {
     setLang(newLang)

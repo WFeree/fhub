@@ -1,9 +1,10 @@
 import { Section } from "@/Layout"
-import { skills } from "@/data/content"
+import { useContent } from "@/LangContext"
 
 export const Projects = () => {
+  const { skills, ui } = useContent()
   return (
-    <Section id="skills" title="Skillset">
+    <Section id="skills" title={ui.skillsTitle}>
       <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,15rem),1fr))] gap-6">
         {skills.map(p => (
           <li key={p.title} className="flex">

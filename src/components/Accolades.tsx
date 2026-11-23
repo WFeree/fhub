@@ -1,10 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Section } from "@/Layout"
-import { accolades } from "@/data/content"
+import { useContent } from "@/LangContext"
 
 export const Accolades = () => {
+  const { accolades, ui } = useContent()
   return (
-    <Section id="accolades" title="My Accolades">
+    <Section id="accolades" title={ui.accoladesTitle}>
       <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,18rem),1fr))] gap-6">
         {accolades.map(a => (
           <li key={a.title} className="flex">
@@ -16,7 +17,6 @@ export const Accolades = () => {
                 <CardTitle className="text-xl">{a.title}</CardTitle>
                 <CardDescription className="text-base">{a.subtext}</CardDescription>
               </CardContent>
-              {/* <CardContent className="mt-auto font-mono text-sm text-muted-foreground">{a.stack.join(", ")}</CardContent> */}
             </Card>
           </li>
         ))}
